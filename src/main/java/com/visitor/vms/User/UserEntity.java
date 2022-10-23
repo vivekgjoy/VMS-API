@@ -10,9 +10,16 @@ import javax.persistence.Table;
 @Entity
 @Table(name="admin")
 public class UserEntity {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int branchid;
+	@Id 
+	@GeneratedValue (strategy = GenerationType.AUTO)
+	@Column (name="branchid")
+	private Integer branchid;
+	
+	@Column (name="firstname")
+	private String firstname;
+	
+	@Column (name="lastname")
+	private String lastname;
 	
 	@Column (name="email")
 	private String email;
@@ -20,20 +27,36 @@ public class UserEntity {
 	@Column	(name="password")
 	private String password;
 
-	public int getId() {
+	public Integer getBranchid() {
 		return branchid;
 	}
 
-	public void setId(int id) {
-		this.branchid = id;
+	public void setBranchid(Integer branchid) {
+		this.branchid = branchid;
+	}
+
+	public String getFirstname() {
+		return firstname;
+	}
+
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+
+	public String getLastname() {
+		return lastname;
+	}
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
 	}
 
 	public String getEmail() {
 		return email;
 	}
 
-	public void setEmail(String username) {
-		this.email = username;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getPassword() {
@@ -43,5 +66,6 @@ public class UserEntity {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
 
 }

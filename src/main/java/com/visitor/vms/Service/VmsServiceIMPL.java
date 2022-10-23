@@ -19,6 +19,8 @@ public class VmsServiceIMPL implements VmsService {
 		Responseid saveEntity=new Responseid();
 		try {
 			UserEntity entity=new UserEntity();
+			entity.setFirstname(request.getFirstname());
+			entity.setLastname(request.getLastname());
 			entity.setEmail(request.getEmail());
 			entity.setPassword(request.getPassword());
 			repo.save(entity);
