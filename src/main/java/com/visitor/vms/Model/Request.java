@@ -1,10 +1,10 @@
 package com.visitor.vms.Model;
 
-public class Requestid {
+public class Request {
 	private Integer branchid;
 	private String firstname;
 	private String lastname;
-	private String email;
+	private String mail;
 	private String password;
 	
 	public Integer getBranchid() {
@@ -25,11 +25,11 @@ public class Requestid {
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
 	}
-	public String getEmail() {
-		return email;
+	public String getMail() {
+		return mail;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+	public void setMail(String email) {
+		this.mail = email;
 	}
 	public String getPassword() {
 		return password;

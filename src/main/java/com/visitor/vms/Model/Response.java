@@ -1,6 +1,6 @@
 package com.visitor.vms.Model;
 
-public class Responseid {
+public class Response {
 
 	private String message;
 
